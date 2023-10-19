@@ -5,13 +5,10 @@ export default async function Home() {
   const movies = await getTrendingMovies();
   return (
     <div className=''>
-      <h1>Trending Movies</h1>
-      <div className='w-full grid grid-cols-5 gap-4'>
+      <div className='sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mx-auto py-4'>
         {movies.map(movie =>{
           return (
-            <div className=''>
-              <Card movie={movie}/>
-            </div>
+            <Card movie={movie} />
           )
         })}
       </div>
